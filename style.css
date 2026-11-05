@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #111; color: #fff; font-family: Inter, "Segoe UI", Arial, sans-serif; }
+.wallpaper {
+  position: relative; width: 100%; height: 100%; min-height: 100vh;
+  background-color: #161616; background-position: center; background-size: cover;
+  background-repeat: no-repeat; transition: background-image .35s ease;
+}
+.shade {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.28), transparent 35%, transparent 65%, rgba(0,0,0,.30));
+  pointer-events: none;
+}
+.status {
+  position: absolute; top: 9vh; left: 0; right: 0; text-align: center;
+  text-shadow: 0 2px 18px rgba(0,0,0,.55); padding: 0 20px;
+}
+.clock { font-size: clamp(58px, 10vw, 132px); line-height: 1; font-weight: 300; letter-spacing: -.055em; }
+.date { margin-top: 14px; font-size: clamp(15px, 2vw, 22px); font-weight: 400; }
+.desktop-label { margin-top: 10px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.message {
+  position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%);
+  max-width: calc(100% - 36px); padding: 9px 14px; border-radius: 20px;
+  background: rgba(0,0,0,.45); color: rgba(255,255,255,.9);
+  font-size: 12px; text-align: center; backdrop-filter: blur(10px);
+}
+.message:empty { display: none; }
+.reload {
+  position: absolute; right: 22px; bottom: 22px; width: 38px; height: 38px;
+  border: 1px solid rgba(255,255,255,.4); border-radius: 50%;
+  background: rgba(0,0,0,.35); color: #fff; font-size: 22px; cursor: pointer;
+  opacity: .45; transition: opacity .2s, transform .2s;
+}
+.reload:hover { opacity: 1; transform: rotate(45deg); }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <title>Desktop Wallpaper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="wallpaper" class="wallpaper" aria-label="Desktop wallpaper">
+    <div class="shade"></div>
+    <section class="status">
+      <div id="clock" class="clock">--:--</div>
+      <div id="date" class="date"></div>
+      <div id="desktop-label" class="desktop-label"></div>
+    </section>
+    <div id="message" class="message" role="status">Loading wallpaper…</div>
+    <button id="reload" class="reload" type="button" title="Reload wallpaper" aria-label="Reload wallpaper">↻</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
